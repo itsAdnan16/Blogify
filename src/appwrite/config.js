@@ -13,7 +13,7 @@ export class Service{
         this.bucket = new Storage(this.client);
     }
 
-    async creaePost({title,slug,content,featuredImage,status,userId}){
+    async createPost({title,slug,content,featuredImage,status,userId}){
         try{
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
@@ -49,11 +49,11 @@ export class Service{
     }
     async deletePost(slug){
         try{
-            return this.databases.deletePost(
+            return await this.databases.deletePost(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug
-            )
+            )   
         }
         catch(error){
             console.log("Appwrite service :: deletePost :: error",error);
