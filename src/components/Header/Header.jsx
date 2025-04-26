@@ -44,8 +44,10 @@ function Header(){
             <container>
                 <nav className="='flex">
                     <div classname = 'mr-4'>
-                        <Link to ='/'></Link>
+                        <Link to ='/'>
                         <logo witdth='70px'/>
+                        </Link>
+                        
                     </div>
 
                     <ul className="flex ml-auto">
